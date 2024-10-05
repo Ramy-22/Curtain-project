@@ -80,15 +80,14 @@ void loop()
     delay(100);
     if (buttonState == HIGH)
     {
-      if(curtainState == CURTAIN_STATE_OPENED)
+      if(curtainState == CURTAIN_STATE_OPENED || curtainState = STATE_UNKNOWN)
       {
         close_curtain();
       }
-      else if(curtainState == CURTAIN_STATE_CLOSED)
+      else if(curtainState == CURTAIN_STATE_CLOSED || curtainState = STATE_UNKNOWN)
       {
         open_curtain();
       }
-
     }
     
   }
